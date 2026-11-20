@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>쇼룸 상담 예약 · 온결</title>
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="booking">
+<div id="smooth-wrapper">
+<div id="smooth-content">
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="온결 홈">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><g><path d="M14 54 V30 A18 18 0 0 1 50 30 V54"/><path d="M25 54 V33 A7 7 0 0 1 39 33 V54"/></g></svg>
+      <span>온결</span>
+    </a>
+    <nav class="site-nav" aria-label="주 메뉴">
+      <a href="collection.html">컬렉션</a>
+      <a href="index.html#size">크기로 찾기</a>
+      <a href="#">후기</a>
+      <a href="booking.html" aria-current="page">쇼룸</a>
+      <a href="#">서비스</a>
+    </nav>
+  </div>
+</header>
+
+<form class="container booking" data-booking novalidate>
+  <div class="booking__form">
+    <div class="stack" style="gap: 10px">
+      <h1 class="h1">쇼룸 상담 예약</h1>
+      <p class="body" style="line-height: 1.7">1:1 상담 60분. 실제로 앉아보고, 우리 집에 맞는 크기와 수종을 함께 정해요.</p>
+    </div>
+
+    <section>
+      <h2>1. 방문 날짜</h2>
+      <div class="date-grid" role="group" aria-label="방문 날짜" data-dates>
+        <button type="button" class="date-btn" aria-pressed="false" data-date="7/13"><b>7/13</b><small>화</small></button>
+        <button type="button" class="date-btn" aria-pressed="false" data-date="7/14"><b>7/14</b><small>수</small></button>
+        <button type="button" class="date-btn" aria-pressed="false" data-date="7/15"><b>7/15</b><small>목</small></button>
+        <button type="button" class="date-btn" aria-pressed="false" data-date="7/16"><b>7/16</b><small>금</small></button>
+        <button type="button" class="date-btn" aria-pressed="false" data-date="7/17"><b>7/17</b><small>토</small></button>
+        <button type="button" class="date-btn" aria-pressed="false" data-date="7/18"><b>7/18</b><small>일</small></button>
+      </div>
+      <p class="caption">매주 월요일 휴무</p>
+    </section>
+
+    <section>
+      <h2>2. 시간</h2>
+      <div class="chip-row" role="group" aria-label="방문 시간" data-times>
+        <button type="button" class="time-btn" aria-pressed="false" data-time="11:00">11:00</button>
+        <button type="button" class="time-btn" aria-pressed="false" data-time="13:00">13:00</button>
+        <button type="button" class="time-btn" aria-pressed="false" data-time="15:00">15:00</button>
+        <button type="button" class="time-btn" aria-pressed="false" data-time="17:00">17:00</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 관심 제품 <small>(여러 개 선택 가능)</small></h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px" data-interests>
+        <label class="interest"><input type="checkbox" value="다이닝 테이블" checked>다이닝 테이블</label>
+        <label class="interest"><input type="checkbox" value="체어·벤치">체어·벤치</label>
+        <label class="interest"><input type="checkbox" value="소파">소파</label>
+        <label class="interest"><input type="checkbox" value="거실 테이블">거실 테이블</label>
+        <label class="interest"><input type="checkbox" value="수납">수납</label>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. 도면 또는 공간 사진 <small>(선택)</small></h2>
+      <label for="plan" class="dropzone" data-dropzone>
+        <b data-dropzone-label>파일을 끌어오거나 눌러서 올리기</b>
+        <span class="caption">평면도, 거실·다이닝 사진, 줄자로 잰 치수 메모 모두 좋아요 · 최대 20MB</span>
+      </label>
+      <input id="plan" type="file" style="font-size: 14px">
+    </section>
+
+    <section style="gap: 16px">
+      <h2>5. 연락처</h2>
+      <div class="contact-grid">
+        <div class="field">
+          <label for="name">이름</label>
+          <input id="name" class="input" type="text" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="phone">휴대폰 번호</label>
+          <div class="phone-row">
+            <input id="phone" class="input" type="tel" autocomplete="tel" placeholder="010-0000-0000">
+            <button type="button" class="btn btn--outline">인증</button>
+          </div>
+        </div>
+      </div>
+      <label class="check">
+        <input type="checkbox" id="agree">
+        <span>[필수] 상담 예약을 위한 개인정보 수집·이용에 동의합니다 <a href="#" style="color: var(--text-3)">내용 보기</a></span>
+      </label>
+    </section>
+  </div>
+
+  <aside class="summary">
+    <img src="assets/img/showroom.jpg" alt="햇살이 드는 쇼룸 공간">
+    <h2>예약 요약</h2>
+    <dl>
+      <dt>일정</dt><dd data-sum-when>아직 고르지 않았어요</dd>
+      <dt>관심 제품</dt><dd data-sum-items>다이닝 테이블</dd>
+      <dt>상담</dt><dd>1:1 · 60분 · 무료</dd>
+      <dt>장소</dt><dd>[쇼룸 주소] · [주차 안내]</dd>
+    </dl>
+    <button type="submit" class="btn" disabled data-submit>예약 신청하기</button>
+    <p class="hint" aria-live="polite" data-hint>방문 날짜와 시간을 먼저 골라 주세요.</p>
+  </aside>
+</form>
+
+<main class="done" data-done hidden>
+  <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29"/><path d="M20 33l8 8 16-17"/></svg>
+  <h1>예약 신청이 접수됐어요</h1>
+  <p class="body">24시간 안에 담당자가 카카오 알림톡으로 확정 안내를 드려요. 그 담당자가 상담부터 설치, A/S까지 함께합니다.</p>
+  <div class="done__box">
+    <p><span class="muted">일정</span> · <span data-sum-when></span></p>
+    <p><span class="muted">관심 제품</span> · <span data-sum-items></span></p>
+    <p><span class="muted">장소</span> · [쇼룸 주소]</p>
+  </div>
+  <div class="btn-row" style="justify-content: center; gap: 12px">
+    <a href="collection.html" class="btn">방문 전 컬렉션 둘러보기</a>
+    <button type="button" class="btn btn--outline" data-reset>예약 변경하기</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container" style="padding-top: 40px; padding-bottom: 40px">
+    <p class="wordmark">온결</p>
+    <p>예약 문의 [대표 전화] · [영업시간]</p>
+  </div>
+</footer>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/motion.js"></script>
+</body>
+</html>

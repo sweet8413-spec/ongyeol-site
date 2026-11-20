@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>온결 · 오래 머무는 원목 가구</title>
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- 디자인은 style.css 그대로. 아래 두 파일은 인터랙션만 담당 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.css">
+<link rel="stylesheet" href="assets/css/interaction.css">
+</head>
+<body data-page="main">
+
+<nav class="float-nav" aria-label="주 메뉴">
+  <a href="index.html" class="logo" aria-label="온결 홈">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><g><path d="M14 54 V30 A18 18 0 0 1 50 30 V54"/><path d="M25 54 V33 A7 7 0 0 1 39 33 V54"/></g></svg>
+    <span>온결</span>
+  </a>
+  <div class="float-nav__links">
+    <a href="collection.html">컬렉션</a>
+    <a href="#size">크기로 찾기</a>
+    <a href="#process">제작 과정</a>
+    <a href="#">서비스</a>
+  </div>
+  <a href="booking.html" class="float-nav__cta">쇼룸 예약</a>
+  <button type="button" class="menu-btn" aria-label="메뉴 열기" aria-expanded="false" data-menu-toggle>
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</nav>
+
+<main>
+  <section class="hero-wrap">
+    <div class="hero">
+      <picture>
+        <source media="(max-width: 720px)" srcset="assets/img/hero-mobile.jpg">
+        <img src="assets/img/hero.jpg" alt="햇살이 드는 방의 월넛 벤치와 스툴">
+      </picture>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content">
+        <h1><strong>제자리</strong>에,<br>오래 머무는 가구</h1>
+        <div class="hero__side">
+          <p>월넛·오크 원목을 10cm 단위로 맞춰 만들고,<br>주문 후 4~6주 안에 설치까지 끝냅니다.<br>4인 식탁 3,000,000원부터.</p>
+          <a href="#size" class="hero__btn">우리 집 크기로 찾기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rail">
+    <div class="rail__grid">
+      <div class="rail__side"><a href="collection.html">Shop all collection</a></div>
+      <div class="rail__main">
+        <h2 class="rail__title">새로 선보이는<br>소반 컬렉션</h2>
+        <div class="rail__track" id="soban-row" aria-label="소반 컬렉션 제품" tabindex="0">
+          <a href="product.html" class="rail__item">
+            <img src="assets/img/soban-dining-4.jpg" alt="소반 다이닝 테이블" style="object-position: 55% 50%">
+            <span><span class="n">소반 다이닝 테이블</span><span class="s">W 1600~1900 · 월넛 · 오크</span><span class="p">3,000,000원부터</span></span>
+          </a>
+          <a href="#" class="rail__item">
+            <img src="assets/img/soban-chair.jpg" alt="소반 체어" style="object-position: 20% 50%">
+            <span><span class="n">소반 체어</span><span class="s">월넛 · 오크</span><span class="p">800,000원부터</span></span>
+          </a>
+          <a href="#" class="rail__item">
+            <img src="assets/img/bandaji-sideboard.jpg" alt="반닫이 사이드보드" style="object-position: 40% 50%">
+            <span><span class="n">반닫이 사이드보드</span><span class="s">월넛 · 오크</span><span class="p">3,500,000원부터</span></span>
+          </a>
+          <a href="#" class="rail__item">
+            <img src="assets/img/soban-bench.jpg" alt="소반 벤치" style="object-position: 52% 50%">
+            <span><span class="n">소반 벤치</span><span class="s">월넛 · 오크</span><span class="p">900,000원부터</span></span>
+          </a>
+          <a href="#" class="rail__item">
+            <img src="assets/img/soban-armchair.jpg" alt="소반 암체어" style="object-position: 24% 50%">
+            <span><span class="n">소반 암체어</span><span class="s">월넛 · 오크</span><span class="p">1,200,000원부터</span></span>
+          </a>
+          <a href="#" class="rail__item">
+            <img src="assets/img/soban-coffee-table.jpg" alt="소반 커피 테이블" style="object-position: 55% 50%">
+            <span><span class="n">소반 커피 테이블</span><span class="s">월넛 · 오크</span><span class="p">2,000,000원부터</span></span>
+          </a>
+          <a href="#" class="rail__item">
+            <img src="assets/img/soban-side-table.jpg" alt="소반 사이드 테이블" style="object-position: 56% 50%">
+            <span><span class="n">소반 사이드 테이블</span><span class="s">월넛</span><span class="p">1,200,000원부터</span></span>
+          </a>
+        </div>
+        <div class="rail__controls">
+          <div class="rail__bar" aria-hidden="true"><span data-rail-bar></span></div>
+          <div style="display: flex; gap: 8px">
+            <button type="button" class="round-btn" aria-label="이전 제품" data-rail="-1"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 L5 8 L10 13"/></svg></button>
+            <button type="button" class="round-btn" aria-label="다음 제품" data-rail="1"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3 L11 8 L6 13"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="h2-split"><span class="soft">이 거실에 놓인</span><br>온결 가구</h2>
+      <p class="eyebrow">SHOP THE LOOK</p>
+    </div>
+    <div class="look" data-look>
+      <div class="look__photo">
+        <img src="assets/img/soban-module-sofa.jpg" alt="모듈 소파, 원형 커피 테이블, 사이드보드가 놓인 거실">
+        <button type="button" class="hotspot" style="left: 24%; top: 52%" aria-label="소반 모듈 소파 보기" aria-pressed="false" data-look-pick="0"><span></span></button>
+        <button type="button" class="hotspot" style="left: 58%; top: 74%" aria-label="소반 커피 테이블 보기" aria-pressed="true" data-look-pick="1"><span></span></button>
+        <button type="button" class="hotspot" style="left: 84%; top: 46%" aria-label="반닫이 사이드보드 보기" aria-pressed="false" data-look-pick="2"><span></span></button>
+      </div>
+      <div class="look__list">
+        <button type="button" class="look-card" aria-pressed="false" data-look-pick="0" data-name="소반 모듈 소파">
+          <img src="assets/img/soban-module-sofa.jpg" alt="" style="object-position: 20% 50%">
+          <span><span class="n">소반 모듈 소파</span><span class="s">모듈 조합 · 월넛 프레임</span><span class="p">8,000,000원부터</span></span>
+        </button>
+        <button type="button" class="look-card" aria-pressed="true" data-look-pick="1" data-name="소반 커피 테이블">
+          <img src="assets/img/soban-coffee-table.jpg" alt="" style="object-position: 55% 60%">
+          <span><span class="n">소반 커피 테이블</span><span class="s">원형 · 월넛</span><span class="p">2,000,000원부터</span></span>
+        </button>
+        <button type="button" class="look-card" aria-pressed="false" data-look-pick="2" data-name="반닫이 사이드보드">
+          <img src="assets/img/bandaji-sideboard.jpg" alt="" style="object-position: 40% 50%">
+          <span><span class="n">반닫이 사이드보드</span><span class="s">월넛 · 오크</span><span class="p">3,500,000원부터</span></span>
+        </button>
+        <a href="collection.html" class="look__cta"><span data-look-name>소반 커피 테이블</span>&nbsp;자세히 보기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section" style="gap: 40px">
+    <h2 class="story__title"><span class="soft">좋은 나무와 정직한 짜임으로</span><br>오래 곁에 두는 가구를 만듭니다</h2>
+    <div class="story__grid">
+      <div class="pmedia story__big"><img src="assets/img/soban-bench.jpg" alt="햇살이 드는 방의 소반 벤치"></div>
+      <div class="story__text">
+        <div class="pmedia story__small"><img src="assets/img/joinery.jpg" alt="상판 모서리의 주먹장 짜맞춤"></div>
+        <div class="copy">
+          <p class="body">온결은 월넛과 오크, 두 가지 원목만 씁니다. 상판과 다리는 못 대신 짜맞춤으로 결합해 오래 써도 흔들림이 적습니다.</p>
+          <p class="body">유행보다 오래 남는 가구. 수종·산지·제작 공방을 적은 결 카드가 함께 갑니다.</p>
+        </div>
+        <a href="#" class="link-more">온결 이야기 더 보기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="process">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2-split"><span class="soft">한 점이</span><br>만들어지기까지</h2>
+        <p class="eyebrow">FOUR STEPS</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="pmedia"><img src="assets/img/wood-select.jpg" alt="나무 고르기"></div>
+          <div class="step__head"><span class="step__num">01</span><span class="step__name">나무 고르기</span></div>
+          <p>결이 곧고 옹이가 적은 월넛·오크를 골라 충분히 건조합니다.</p>
+        </article>
+        <article class="step">
+          <div class="pmedia"><img src="assets/img/joinery.jpg" alt="짜맞춤" style="object-position: 60% 60%"></div>
+          <div class="step__head"><span class="step__num">02</span><span class="step__name">짜맞춤</span></div>
+          <p>못 대신 나무끼리 맞물리게 깎아 상판과 다리를 결합합니다.</p>
+        </article>
+        <article class="step">
+          <div class="pmedia"><img src="assets/img/grain.jpg" alt="손으로 다듬기" style="object-position: 35% 55%"></div>
+          <div class="step__head"><span class="step__num">03</span><span class="step__name">손으로 다듬기</span></div>
+          <p>모서리를 손에 닿는 감촉까지 하나씩 둥글게 다듬습니다.</p>
+        </article>
+        <article class="step">
+          <div class="pmedia"><img src="assets/img/angle.jpg" alt="오일 마감" style="object-position: 45% 50%"></div>
+          <div class="step__head"><span class="step__num">04</span><span class="step__name">오일 마감</span></div>
+          <p>천연 오일로 결을 살려 마감하고, 결 카드를 함께 담습니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise-wrap">
+    <div class="promise">
+      <img src="assets/img/maker.jpg" alt="햇살 드는 공방에서 대패질하는 장인 김온결">
+      <div class="promise__body">
+        <p class="eyebrow">THE MAKER’S PROMISE</p>
+        <h2>제가 만든 가구는<br><strong>30년</strong> 책임집니다</h2>
+        <div class="signature">
+          <span class="signature__mark" role="img" aria-label="김온결 서명">Kim Ongyeol</span>
+          <span class="caption">김온결 · 온결 협력 공방</span>
+        </div>
+        <div class="stats">
+          <div><b>30년</b><span>구조 수선 무상</span></div>
+          <div><b>4~6주</b><span>주문부터 설치</span></div>
+          <div><b>100%</b><span>원목 · 짜맞춤</span></div>
+          <div><b>0회</b><span>상시 할인</span></div>
+        </div>
+        <div class="btn-row">
+          <a href="#" class="btn btn--dark btn--pill">공방 이야기 보기</a>
+          <a href="booking.html" class="btn btn--outline btn--pill" style="border-color: var(--deepwood); color: var(--deepwood)">쇼룸에서 직접 보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="size" class="band size-finder" data-size-finder>
+    <div class="container">
+      <div class="stack" style="gap: 10px">
+        <h2>식탁 놓을 자리, 몇 cm인가요?</h2>
+        <p class="body" style="line-height: 1.5">길이를 고르면 맞는 제품과 가격을 바로 보여드려요.</p>
+      </div>
+      <div class="chip-row" role="group" aria-label="식탁 길이 선택" style="gap: 10px">
+        <button type="button" class="chip" aria-pressed="true" data-len="160">1600 mm</button>
+        <button type="button" class="chip" aria-pressed="false" data-len="170">1700 mm</button>
+        <button type="button" class="chip" aria-pressed="false" data-len="180">1800 mm</button>
+        <button type="button" class="chip" aria-pressed="false" data-len="190">1900 mm</button>
+      </div>
+      <div class="size-result" aria-live="polite">
+        <div class="stack" style="gap: 6px">
+          <p class="muted" style="font-size: 14px">추천 제품</p>
+          <p class="t">소반 다이닝 테이블 <span data-size-len>160</span>cm · <span data-size-seats>4인</span></p>
+          <p class="d">오크 <span data-size-oak>3,000,000원</span> · 월넛 <span data-size-walnut>3,400,000원</span> · 납기 4~6주</p>
+        </div>
+        <a href="product.html" class="btn" data-size-link>이 크기로 자세히 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="showroom-wrap">
+    <div class="showroom">
+      <img src="assets/img/showroom.jpg" alt="햇살이 드는 쇼룸 공간">
+      <div class="showroom__card" data-visit>
+        <h2>도면을 가져오시면,<br>크기부터 같이 정해요</h2>
+        <p class="lead">1:1 상담 60분 · 무료.<br>실제로 앉아보고 우리 집에 맞는 길이와 수종을 함께 고릅니다.</p>
+        <div class="stack" style="gap: 8px">
+          <p style="font-size: 12px; font-weight: 500" class="muted">이번 주 예약 가능한 날</p>
+          <div class="day-grid" role="group" aria-label="방문 날짜">
+            <button type="button" class="day" aria-pressed="true" data-day="7/13" data-dow="화"><b>7/13</b><small>화</small></button>
+            <button type="button" class="day" aria-pressed="false" data-day="7/14" data-dow="수"><b>7/14</b><small>수</small></button>
+            <button type="button" class="day" aria-pressed="false" data-day="7/15" data-dow="목"><b>7/15</b><small>목</small></button>
+            <button type="button" class="day" aria-pressed="false" data-day="7/16" data-dow="금"><b>7/16</b><small>금</small></button>
+          </div>
+        </div>
+        <a href="booking.html?date=7/13" class="showroom__cta" data-visit-link><span data-visit-label>7/13(화)</span>&nbsp;예약하기 →</a>
+        <p class="muted" style="font-size: 12px">[쇼룸 주소] · [영업시간] · 월요일 휴무</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="stack" style="gap: 8px">
+      <p class="wordmark">온결</p>
+      <p class="slogan">Grain that stays.</p>
+    </div>
+    <nav aria-label="하단 메뉴">
+      <a href="#">브랜드 이야기</a>
+      <a href="#">디자이너 협업</a>
+      <a href="#">결 카드 조회</a>
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a href="booking.html" class="btn">쇼룸 상담 예약</a></div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/interaction.js"></script>
+</body>
+</html>

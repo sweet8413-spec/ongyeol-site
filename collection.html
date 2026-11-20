@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>컬렉션 · 온결</title>
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="collection">
+<div id="smooth-wrapper">
+<div id="smooth-content">
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="온결 홈">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><g><path d="M14 54 V30 A18 18 0 0 1 50 30 V54"/><path d="M25 54 V33 A7 7 0 0 1 39 33 V54"/></g></svg>
+      <span>온결</span>
+    </a>
+    <nav class="site-nav" aria-label="주 메뉴">
+      <a href="collection.html" aria-current="page">컬렉션</a>
+      <a href="index.html#size">크기로 찾기</a>
+      <a href="#">후기</a>
+      <a href="booking.html">쇼룸</a>
+      <a href="#">서비스</a>
+    </nav>
+    <a href="booking.html" class="btn btn--sm">쇼룸 예약</a>
+  </div>
+</header>
+
+<main class="container collection">
+  <div class="section-head" style="gap: 16px">
+    <div class="stack" style="gap: 8px">
+      <h1 class="h1">컬렉션</h1>
+      <p class="muted" style="font-size: 15px">소반 라인 · 월넛과 오크 원목 · 전 제품 가격 공개</p>
+    </div>
+    <div class="sort">
+      <label for="sort">정렬</label>
+      <select id="sort" class="select">
+        <option value="rec">추천순</option>
+        <option value="low">낮은 가격순</option>
+        <option value="high">높은 가격순</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="filters">
+    <div class="chip-row" role="group" aria-label="품목" data-cats>
+      <button type="button" class="chip" aria-pressed="true" data-cat="all">전체</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="dining">다이닝 테이블</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="chair">체어·벤치</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="sofa">소파</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="living">거실 테이블</button>
+      <button type="button" class="chip" aria-pressed="false" data-cat="storage">수납</button>
+    </div>
+    <div class="filters__len" data-lens hidden>
+      <p>식탁 길이</p>
+      <div class="chip-row" role="group" aria-label="식탁 길이">
+        <button type="button" class="chip chip--soft" aria-pressed="true" data-len="0">전체</button>
+        <button type="button" class="chip chip--soft" aria-pressed="false" data-len="1600">1600</button>
+        <button type="button" class="chip chip--soft" aria-pressed="false" data-len="1700">1700</button>
+        <button type="button" class="chip chip--soft" aria-pressed="false" data-len="1800">1800</button>
+        <button type="button" class="chip chip--soft" aria-pressed="false" data-len="1900">1900</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="muted" style="font-size: 14px" aria-live="polite"><span data-count>12</span>개 제품</p>
+
+  <div class="product-grid" data-grid></div>
+
+  <div class="cta-band" style="margin-top: 40px">
+    <div class="stack" style="gap: 8px">
+      <p class="display" style="font-size: 24px">크기가 애매하다면, 쇼룸에서 같이 정해요</p>
+      <p style="font-size: 15px; color: var(--text-2)">도면을 가져오시면 우리 집에 맞는 길이와 수종을 함께 고릅니다.</p>
+    </div>
+    <a href="booking.html" class="btn">쇼룸 상담 예약</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container" style="padding-top: 40px; padding-bottom: 40px">
+    <p class="wordmark">온결</p>
+    <nav aria-label="하단 메뉴">
+      <a href="#">브랜드 이야기</a>
+      <a href="#">디자이너 협업</a>
+      <a href="#">결 카드 조회</a>
+      <a href="#">이용약관</a>
+      <a href="#">개인정보처리방침</a>
+    </nav>
+  </div>
+</footer>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/motion.js"></script>
+</body>
+</html>
